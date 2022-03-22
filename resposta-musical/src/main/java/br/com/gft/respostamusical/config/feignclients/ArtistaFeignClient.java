@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import br.com.gft.respostamusical.api.artista.model.Artista;
 
 @Component
-@FeignClient(name = "resposta-musical", url = "localhost:8084/v1", path = "/artista")
+@FeignClient(name = "resposta-musical", url = "musical:8084/v1", path = "/artista")
 public interface ArtistaFeignClient {
     @GetMapping(value = "/{id}")
     ResponseEntity<Artista> findById(@PathVariable Integer id);

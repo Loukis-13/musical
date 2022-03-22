@@ -49,7 +49,7 @@ class EstiloControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON)
                 ).andDo(print())
-                .andExpect(status().is(200))
+                .andExpect(status().is(201))
                 .andExpect(jsonPath("$.id").value(3))
                 .andExpect(jsonPath("$.descricao").value("Estilo 3"));
     }

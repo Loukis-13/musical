@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(value = "musicalKafkaProducer", url = "http://localhost:8082/v1")
+@FeignClient(value = "musicalKafkaProducer", url = "http://musical-kakfa:8082/v1")
 public interface MusicalFeignClient {
     @PostMapping(value = "/artista", consumes = "application/json")
     ResponseEntity<Artista> returnArtista(@RequestBody Artista artista);
